@@ -17,6 +17,7 @@ final class SolutionTest {
                 {"PAYPALISHIRING", 4, "PINALSIGYAHRPI"},
                 {"PAYP", 4, "PAYP"},
                 {"PAY", 4, "PAY"},
+                {"PAY", 1, "PAY"},
         };
 
         for (final Object[] test : cases) {

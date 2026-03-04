@@ -2,6 +2,9 @@ package zigzagconversion;
 
 final public class Solution {
     public String convert(String s, int numRows) {
+        if (numRows == 1 || s.length() <= numRows) {
+            return s;
+        }
         final char[][] map = new char[s.length()][numRows];
         boolean isDown = true;
         int row = 0;
