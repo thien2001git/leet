@@ -26,8 +26,8 @@ final class SolutionTest {
         };
 
         for (final Object[] test : cases) {
-            String input = (String) test[0];
-            int expected = (int) test[1];
+            final String input = (String) test[0];
+            final int expected = (int) test[1];
             System.out.println("input " + input);
             System.out.println("expected " + expected);
             Assertions.assertEquals(expected, solution.myAtoi(input));

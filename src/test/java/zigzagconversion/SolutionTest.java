@@ -21,9 +21,9 @@ final class SolutionTest {
         };
 
         for (final Object[] test : cases) {
-            String input = (String) test[0];
-            int rows = (int) test[1];
-            String expected = (String) test[2];
+            final String input = (String) test[0];
+            final int rows = (int) test[1];
+            final String expected = (String) test[2];
 
             Assertions.assertEquals(expected, solution.convert(input, rows));
             Assertions.assertEquals(expected, solution.convert2(input, rows));

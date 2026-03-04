@@ -19,8 +19,8 @@ final class SolutionTest {
         };
 
         for (final int[] test : testCases) {
-            int input = test[0];
-            int expected = test[1];
+            final int input = test[0];
+            final int expected = test[1];
 
             Assertions.assertEquals(expected, solution.reverse(input), "Failed on reverse() with input: " + input);
             Assertions.assertEquals(expected, solution.reverse2(input), "Failed on reverse2() with input: " + input);
