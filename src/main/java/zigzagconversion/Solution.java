@@ -37,10 +37,14 @@ final public class Solution {
     }
 
     public String convert2(String s, int numRows) {
-        if (numRows == 1 || s.length() <= numRows) return s;
+        if (numRows == 1 || s.length() <= numRows) {
+            return s;
+        }
 
         StringBuilder[] rows = new StringBuilder[numRows];
-        for (int i = 0; i < numRows; i++) rows[i] = new StringBuilder();
+        for (int i = 0; i < numRows; i++) {
+            rows[i] = new StringBuilder();
+        }
 
         int currentRow = 0;
         boolean goingDown = false;
@@ -56,7 +60,9 @@ final public class Solution {
         }
 
         final StringBuilder result = new StringBuilder();
-        for (final StringBuilder row : rows) result.append(row);
+        for (final StringBuilder row : rows) {
+            result.append(row);
+        }
 
         return result.toString();
     }

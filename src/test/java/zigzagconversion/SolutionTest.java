@@ -14,7 +14,9 @@ final class SolutionTest {
         // Define test cases: {Input String, NumRows, Expected Output}
         final Object[][] cases = {
                 {"PAYPALISHIRING", 3, "PAHNAPLSIIGYIR"},
-                {"PAYPALISHIRING", 4, "PINALSIGYAHRPI"}
+                {"PAYPALISHIRING", 4, "PINALSIGYAHRPI"},
+                {"PAYP", 4, "PAYP"},
+                {"PAY", 4, "PAY"},
         };
 
         for (final Object[] test : cases) {

@@ -23,8 +23,12 @@ final class Solution {
             int pop = x % factor;
             x /= factor;
 
-            if (rev > Integer.MAX_VALUE / factor || (rev == Integer.MAX_VALUE / factor && pop > 7)) return 0;
-            if (rev < Integer.MIN_VALUE / factor || (rev == Integer.MIN_VALUE / factor && pop < -8)) return 0;
+            if (rev > Integer.MAX_VALUE / factor || (rev == Integer.MAX_VALUE / factor && pop > 7)) {
+                return 0;
+            }
+            if (rev < Integer.MIN_VALUE / factor || (rev == Integer.MIN_VALUE / factor && pop < -8)) {
+                return 0;
+            }
 
             rev = rev * 10 + pop;
         }

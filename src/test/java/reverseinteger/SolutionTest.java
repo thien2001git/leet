@@ -13,7 +13,9 @@ final class SolutionTest {
                 {-123, -321},
                 {120, 21},
                 {1534236469, 0},
-                {-2147483648, 0}
+                {-2147483648, 0},
+                {Integer.MAX_VALUE, 0},
+                {Integer.MIN_VALUE, 0},
         };
 
         for (final int[] test : testCases) {
