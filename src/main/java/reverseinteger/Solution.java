@@ -1,6 +1,6 @@
 package reverseinteger;
 
-class Solution {
+final class Solution {
     public int reverse(int x) {
         final int factor = 10;
 

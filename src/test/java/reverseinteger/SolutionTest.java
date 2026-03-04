@@ -3,21 +3,25 @@ package reverseinteger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class SolutionTest {
+final class SolutionTest {
 
     @Test
     void reverse() {
         final Solution solution = new Solution();
-        Assertions.assertEquals(321, solution.reverse(123));
-        Assertions.assertEquals(-321, solution.reverse(-123));
-        Assertions.assertEquals(21, solution.reverse(120));
-        Assertions.assertEquals(0, solution.reverse(1534236469));
-        Assertions.assertEquals(0, solution.reverse(-2147483648));
+        final int[][] testCases = {
+                {123, 321},
+                {-123, -321},
+                {120, 21},
+                {1534236469, 0},
+                {-2147483648, 0}
+        };
 
-        Assertions.assertEquals(321, solution.reverse2(123));
-        Assertions.assertEquals(-321, solution.reverse2(-123));
-        Assertions.assertEquals(21, solution.reverse2(120));
-        Assertions.assertEquals(0, solution.reverse2(1534236469));
-        Assertions.assertEquals(0, solution.reverse2(-2147483648));
+        for (final int[] test : testCases) {
+            int input = test[0];
+            int expected = test[1];
+
+            Assertions.assertEquals(expected, solution.reverse(input), "Failed on reverse() with input: " + input);
+            Assertions.assertEquals(expected, solution.reverse2(input), "Failed on reverse2() with input: " + input);
+        }
     }
 }

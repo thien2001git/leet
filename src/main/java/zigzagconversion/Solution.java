@@ -1,6 +1,6 @@
 package zigzagconversion;
 
-public class Solution {
+final public class Solution {
     public String convert(String s, int numRows) {
         final char[][] map = new char[s.length()][numRows];
         boolean isDown = true;
